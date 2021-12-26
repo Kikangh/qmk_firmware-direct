@@ -25,11 +25,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MANUFACTURER tshort
 
 /* mouse config */
-#define MOUSEKEY_INTERVAL    20
-#define MOUSEKEY_DELAY       0
-#define MOUSEKEY_TIME_TO_MAX 60
-#define MOUSEKEY_MAX_SPEED   7
-#define MOUSEKEY_WHEEL_DELAY 0
+#define MOUSEKEY_INTERVAL    16
+#define MOUSEKEY_DELAY       25
+#define MOUSEKEY_TIME_TO_MAX 50
+#define MOUSEKEY_MAX_SPEED   40
+#define MOUSEKEY_WHEEL_DELAY 300
+#define MOUSEKEY_WHEEL_TIME_TO_MAX 40
 
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE 5
