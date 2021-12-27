@@ -22,3 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define EE_HANDS
 
 #define KINETIC_SPEED
+
+#define COMBO_VARIABLE_LEN
+
+#define COMBO_TERM 50

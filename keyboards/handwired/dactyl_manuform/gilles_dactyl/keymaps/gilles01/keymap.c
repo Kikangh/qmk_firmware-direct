@@ -23,6 +23,7 @@
 #include QMK_KEYBOARD_H
 #include "keymap_bepo.h"
 
+
 extern keymap_config_t keymap_config;
 
 //Layers declaration
@@ -34,7 +35,6 @@ _FUNCT,
 _ARROW,
 _NUMBERS
 };
-
 
 /*#define _BASE    0
 #define _RAISE   1
@@ -83,6 +83,10 @@ _NUMBERS
 #define KC_MD KC_MS_DOWN
 #define KC_MB1 KC_MS_BTN1
 #define KC_MB2 KC_MS_BTN1
+#include "g/keymap_combo.h"
+
+//combo parameters :
+#define COMBO_ONLY_FROM_LAYER _BASE
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -109,12 +113,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                         |   Copy  |   Paste  |
                                                         +---------+----------+
 */
-  KC_ESC,    KC_1,            KC_2,         KC_3,               KC_4,          KC_5,                                             			                                  					KC_6,       		 KC_7,         KC_8,            KC_9,            KC_0,            KC_BSPC, 
-  KC_TAB,    KC_Q,            KC_W,         KC_E,               KC_R,          KC_T,                                             			                                  					KC_Y,       		 KC_U,         KC_I,            KC_O,            KC_P,            KC_BSPC, 
-  KC_LSHIFT, LT(_ARROW,KC_A), LCTL_T(KC_S), LALT_T(KC_D),       LGUI_T(KC_F),  BP_COMM,                                          			                                  					KC_H,       		 RGUI_T(KC_J), RALT_T(KC_K),    RCTL_T(KC_L),    RSFT_T(KC_SCLN), KC_QUOT, 
-  KC_F3,     KC_Z,            KC_X,         KC_C,               KC_V,          KC_B,                                             			                                  					KC_N,       		 KC_M,         BP_G,            BP_H,            KC_SLSH,         KC_BSLS, 
-                              KC_UP,        LT(_FUNCT,KC_DOWN),                LT(_LOWER,KC_TAB), LGUI_T(KC_SPC), LT(_FUNCT,KC_BSPC),    SGUI(KC_4),       LT(_NUMBERS,KC_SPC),		LT(_RAISE,BP_W),               RALT_T(KC_LEFT), RCTL_T(KC_RGHT),
-                                                                                             			LGUI(BP_C),     LGUI(KC_U),            LCTL(SGUI(KC_4)), KC_ENT
+  KC_ESC,    KC_1,            KC_2,          KC_3,               KC_4,          KC_5,                                             			                                  					KC_6,       		 KC_7,         KC_8,            KC_9,            KC_0,            KC_BSPC, 
+  KC_TAB,    KC_Q,            KC_W,          KC_E,               KC_R,          KC_T,                                             			                                  					KC_Y,       		 KC_U,         KC_I,            KC_O,            KC_P,            KC_BSPC, 
+  KC_LSHIFT, LT(_ARROW,KC_A), LCTL_T(KC_S),  LALT_T(KC_D),       LGUI_T(KC_F),  BP_COMM,                                          			                                  					KC_H,       		 RGUI_T(KC_J), RALT_T(KC_K),    RCTL_T(KC_L),    RSFT_T(KC_SCLN), KC_QUOT, 
+  KC_F3,     KC_Z,            KC_X,          KC_C,               KC_V,          KC_B,                                             			                                  					KC_N,       		 KC_M,         BP_G,            BP_H,            KC_SLSH,         KC_BSLS, 
+                              LCTL(KC_LEFT), LGUI(LALT(BP_C)),                  LT(_LOWER,KC_TAB), LGUI_T(KC_SPC), LT(_FUNCT,KC_BSPC),    SGUI(KC_4),       LT(_NUMBERS,KC_SPC),		LT(_RAISE,BP_W),               RCTL(KC_SPACE),           RCTL(KC_RGHT),
+                                                                                             			 LGUI(BP_C),     LGUI(KC_U),            LCTL(SGUI(KC_4)), KC_ENT
 /* right hand
                             +-------------+-------+-------+-------+---------+------+
                             |      @      |   +   |   -   |   /   |    *    | BSPC |
@@ -149,7 +153,7 @@ ____,  HYPR(KC_R),         KC_WH_R, KC_MS_U, KC_WH_L, LSFT(LCA(KC_SPC)),      		
 ____,  RALT(RGUI(KC_G)),   KC_MS_L, KC_MS_D, KC_MS_R, LCS(KC_SPC),      																			                 KC_PGUP,     KC_BTN1,      KC_BTN2,             SGUI(KC_QUOT), KC_VOLD, KC_ENT,
 ____,  LCTL(KC_F),         KC_PGUP, KC_F10,  KC_PGDN, LCTL(LGUI(KC_SPC)),																			                 KC_PGDN,     KC_WH_D,      KC_WH_U,             SGUI(KC_SLSH), KC_MUTE, ____,
                            KC_HOME, KC_END,           LOWER,          		KC_SPC,  		KC_BSPC, 								KC_DEL, KC_NO,   RAISE,                     LCTL(KC_LEFT),       LCTL(KC_RGHT),                   
-                                                                          LCTL(KC_SPC), LALT(SGUI(KC_U)), 		KC_LALT, KC_END
+                                                                          LCTL(KC_SPC), LALT(SGUI(KC_U)), 		RESET, KC_END
 ),
 
 [_LOWER] = LAYOUT_5x6_5_gilles(
@@ -178,8 +182,8 @@ ____,  LCTL(KC_F),         KC_PGUP, KC_F10,  KC_PGDN, LCTL(LGUI(KC_SPC)),							
 
 [_ARROW] = LAYOUT_5x6_5_gilles( \
   // left hand
-  ____,            ____,            ____,         ____,       ____,       KC_BSPC,            																				                      KC_DEL,        			 ____,                   ____,               ____,           ____,    KC_BSPC,
-  ____,            ____,            LCTL(KC_1),   LCTL(KC_2), WkfyMirror, KC_DEL,            																					                      BP_AT,         			 LALT(LGUI(LSFT(KC_V))), LCTL(LSFT(KC_TAB)), LCTL(KC_TAB),   ____,    BP_Z,
+  TO(_BASE),       ____,            ____,         ____,       ____,       KC_BSPC,            																				                      KC_DEL,        			 ____,                   ____,               ____,           ____,    KC_BSPC,
+  TO(_BASE),       ____,            LCTL(KC_1),   LCTL(KC_2), WkfyMirror, KC_DEL,            																					                      BP_AT,         			 LALT(LGUI(LSFT(KC_V))), LCTL(LSFT(KC_TAB)), LCTL(KC_TAB),   ____,    BP_Z,
   ____,            ____,            KC_LCTRL,     KC_LALT,    KC_LGUI,    KC_ENT,            																				                        KC_TILD,       			 KC_LEFT,                KC_UP,              KC_DOWN,        KC_RGHT, KC_ENT,
   RESET,           ____,            ____,         REDO,       UNDO,       LGUI(KC_TAB),            																	                        LSFT(BP_QUOT), 			 KC_GRV,                 WkfyMovUp,          WkfyMovDw,			 ____,    ____,
                                                   ____,       ____,				SGUI(KC_LEFT), LSFT_T(KC_SPC), KC_BSPC,               RALT_T(KC_BSPC), KC_LSHIFT, LALT(LSFT(KC_LEFT)),                         WkfyPreNod,         WkfyNxtNod,

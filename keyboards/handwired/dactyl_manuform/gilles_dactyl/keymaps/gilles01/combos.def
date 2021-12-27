@@ -1,0 +1,27 @@
+//   name     			result    			chord keys
+COMB(SITA_ESC,  		KC_ESC,   			KC_TAB, KC_LSFT)
+COMB(YXDOT_ESC, 		KC_ESC,   			KC_X, KC_C, KC_V) // Using bepo letters in name, but standard Qwerty KC_ in the chord keys for now.
+COMB(CApos_ENT,			KC_ENT,				KC_H, KC_N)
+COMB(ComK_ENT,			KC_ENT,				BP_COMM, KC_B)
+COMB(CircC_DEL,			KC_DEL,				KC_Y, KC_H)
+COMB(VT_BKSP,			KC_BSPC,			KC_U, KC_J)
+// Lettres
+COMB(DS_Z,				BP_Z,				KC_I, RALT_T(KC_K))
+COMB(TQ_W,				BP_W,				KC_J, KC_M)
+COMB(CT_B,				BP_B,				KC_H, KC_J)
+// Functions
+COMB(Edot_UNDO,   		LGUI(BP_Z),   		LGUI_T(KC_F), KC_V)
+COMB(IX_REDO,   		SGUI(BP_Z),   		LALT_T(KC_D), KC_C)
+COMB(EU_CUT,			LGUI(BP_X),			LCTL_T(KC_S), KC_W)
+COMB(PI_COPY,			LGUI(BP_C),			LALT_T(KC_D), KC_E)
+COMB(OE_PASTE,			LGUI(BP_V),			LGUI_T(KC_F), KC_R)
+COMB(EaccVirg_PASTESF,  LALT(SGUI(BP_V)),	KC_T, KC_G)
+TOGG(ARROW,				_ARROW,				KC_W, KC_E, KC_R)
+TOGG(BASE,				_BASE,				LCTL(KC_1), LCTL(KC_2), WkfyMirror)
+COMB(EVir_CMDTAB,		LGUI(KC_TAB),		LGUI_T(KC_F), KC_G)
+COMB(DotK_TAB,			KC_TAB,				KC_V, KC_B)
+COMB(AposQ_SftTAB,		LSFT(KC_TAB),		KC_N, KC_M)
+// COMB(JKL_SPC,  		KC_SPC,   		KC_J, KC_K, KC_L)
+// COMB(BSSL_CLR, 		KC_NO,    		KC_BSPC, KC_LSFT) // using KC_NO as the resulting keycode is the same as COMBO_ACTION before.
+// COMB(QW_UNDO,  		C(KC_Z),  		KC_Q, KC_W)
+// SUBS(TH_THE,   		"the",    		KC_T, KC_H) // SUBS uses SEND_STRING to output the given string.
