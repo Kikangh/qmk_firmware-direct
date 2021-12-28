@@ -21,4 +21,5 @@
 #define FIRMWARE_VERSION u8"EnMWb/m7JWN"
 #define RGB_MATRIX_STARTUP_SPD 60
 
+// Added for combo support
 #define COMBO_VARIABLE_LEN
