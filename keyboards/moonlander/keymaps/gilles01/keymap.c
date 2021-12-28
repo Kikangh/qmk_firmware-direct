@@ -44,7 +44,7 @@ enum custom_keycodes {
   BP_RSPC,
 };
 
-// Options added for combo support :
+// Options added for combo and deprecated bepo keycodes support :
 #define _BASE 0
 #define _ARROW 1
 
