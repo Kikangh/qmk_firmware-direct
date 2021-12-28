@@ -1,14 +1,15 @@
+// Using bepo letters in name. Chord Keys must match exactly was is typed in base layer in keymap.c
 //   name     			result    			chord keys
 COMB(SITA_ESC,  		KC_ESC,   			KC_TAB, KC_LSFT)
-COMB(YXDOT_ESC, 		KC_ESC,   			KC_X, KC_C, KC_V) // Using bepo letters in name, but standard Qwerty KC_ in the chord keys for now.
+COMB(YXDOT_ESC, 		KC_ESC,   			KC_X, KC_C, KC_V)
 COMB(CApos_ENT,			KC_ENT,				KC_H, KC_N)
 COMB(ComK_ENT,			KC_ENT,				BP_COMM, KC_B)
 COMB(CircC_DEL,			KC_DEL,				KC_Y, KC_H)
-COMB(VT_BKSP,			KC_BSPC,			KC_U, KC_J)
+COMB(VT_BKSP,			KC_BSPC,			KC_U, RGUI_T(KC_J))
 // Lettres
 COMB(DS_Z,				BP_Z,				KC_I, RALT_T(KC_K))
-COMB(TQ_W,				BP_W,				KC_J, KC_M)
-COMB(CT_B,				BP_B,				KC_H, KC_J)
+COMB(TQ_W,				BP_W,				RGUI_T(KC_J), KC_M)
+COMB(CT_B,				BP_B,				KC_H, RGUI_T(KC_J))
 // Functions
 COMB(Edot_UNDO,   		LGUI(BP_Z),   		LGUI_T(KC_F), KC_V)
 COMB(IX_REDO,   		SGUI(BP_Z),   		LALT_T(KC_D), KC_C)
@@ -17,7 +18,7 @@ COMB(PI_COPY,			LGUI(BP_C),			LALT_T(KC_D), KC_E)
 COMB(OE_PASTE,			LGUI(BP_V),			LGUI_T(KC_F), KC_R)
 COMB(EaccVirg_PASTESF,  LALT(SGUI(BP_V)),	KC_T, KC_G)
 TOGG(ARROW,				_ARROW,				KC_W, KC_E, KC_R)
-TOGG(BASE,				_BASE,				LCTL(KC_1), LCTL(KC_2), WkfyMirror)
+TOGG(BASE,				_BASE,				LCTL(KC_1), LCTL(KC_2), WkfyMirror) // latest test shows that this does not seem to work.
 COMB(EVir_CMDTAB,		LGUI(KC_TAB),		LGUI_T(KC_F), KC_G)
 COMB(DotK_TAB,			KC_TAB,				KC_V, KC_B)
 COMB(AposQ_SftTAB,		LSFT(KC_TAB),		KC_N, KC_M)
