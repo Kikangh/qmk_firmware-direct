@@ -45,14 +45,15 @@ enum custom_keycodes {
 };
 
 // Options added for combo and deprecated bepo keycodes support :
+#include "old_keymap_bepo.h"
+
+// these keycodes exist in my combo def (trying to have the same version for moonlander and dactylmanuform).
 #define _BASE 0
 #define _ARROW 1
+#define WkfyMirror LGUI(LSFT(BP_M)) 
 
-#include "old_keymap_bepo.h"
-#define WkfyMirror LGUI(LSFT(BP_M))
-
+//combo specific declaration and parameters :
 #include "g/keymap_combo.h"
-//combo parameters :
 #define COMBO_ONLY_FROM_LAYER _BASE
 
 enum tap_dance_codes {
