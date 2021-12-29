@@ -69,8 +69,13 @@ _NUMBERS
 #define WkfyPreNod LCS(KC_9)
 #define WkfyNxtNod LCS(KC_0)
 
-//
+//Shortcuts for Hook
+#define Hook        LSG(KC_SPC)
+#define HookCpyLk   LGUI(LALT(LCTL(KC_SPC)))
+#define HookCpyMDLk LSG(LALT(KC_SPC))
+#define HookToLink  LSG(LCTL(KC_SPC))
 
+//
 
 #define SFT_ESC  SFT_T(KC_ESC)
 #define CTL_BSPC CTL_T(KC_BSPC)
@@ -117,7 +122,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,    KC_Q,            KC_W,          KC_E,               KC_R,          KC_T,                                             			                                  					KC_Y,       		 KC_U,         KC_I,            KC_O,            KC_P,            KC_BSPC, 
   KC_LSHIFT, LT(_ARROW,KC_A), LCTL_T(KC_S),  LALT_T(KC_D),       LGUI_T(KC_F),  BP_COMM,                                          			                                  					KC_H,       		 RGUI_T(KC_J), RALT_T(KC_K),    RCTL_T(KC_L),    RSFT_T(KC_SCLN), KC_QUOT, 
   KC_F3,     KC_Z,            KC_X,          KC_C,               KC_V,          KC_B,                                             			                                  					KC_N,       		 KC_M,         BP_G,            BP_H,            KC_SLSH,         KC_BSLS, 
-                              LCTL(KC_LEFT), LGUI(LALT(BP_C)),                  LT(_LOWER,KC_TAB), LGUI_T(KC_SPC), LT(_FUNCT,KC_BSPC),    SGUI(KC_4),       LT(_NUMBERS,KC_SPC),		LT(_RAISE,BP_W),               RCTL(KC_SPACE),           RCTL(KC_RGHT),
+                              LCTL(KC_LEFT), LGUI(LALT(BP_C)),                  LT(_LOWER,KC_TAB), LGUI_T(KC_SPC), LT(_FUNCT,KC_BSPC),    SGUI(KC_4),       LT(_NUMBERS,KC_SPC),		LT(_RAISE,BP_W),               RCTL(KC_SPC),           RCTL(KC_RGHT),
                                                                                              			 LGUI(BP_C),     LGUI(KC_U),            LCTL(SGUI(KC_4)), KC_ENT
 /* right hand
                             +-------------+-------+-------+-------+---------+------+
@@ -148,12 +153,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_RAISE] = LAYOUT_5x6_5_gilles(
   // left hand
-____,  LALT(LGUI(KC_ESC)), KC_ACL0, KC_ACL1, KC_ACL2, ____,          																					                 KC_PWR,      KC_ACL0,      KC_ACL1,             KC_ACL2,          ____,    ____,  
-____,  HYPR(KC_R),         KC_WH_R, KC_MS_U, KC_WH_L, LSFT(LCA(KC_SPC)),      																                 KC_BTN3, 		KC_HOME,      KC_END,              LGUI(KC_QUOT), KC_VOLU, ____,
-____,  RALT(RGUI(KC_G)),   KC_MS_L, KC_MS_D, KC_MS_R, LCS(KC_SPC),      																			                 KC_PGUP,     KC_BTN1,      KC_BTN2,             SGUI(KC_QUOT), KC_VOLD, KC_ENT,
-____,  LCTL(KC_F),         KC_PGUP, KC_F10,  KC_PGDN, LCTL(LGUI(KC_SPC)),																			                 KC_PGDN,     KC_WH_D,      KC_WH_U,             SGUI(KC_SLSH), KC_MUTE, ____,
-                           KC_HOME, KC_END,           LOWER,          		KC_SPC,  		KC_BSPC, 								KC_DEL, KC_NO,   RAISE,                     LCTL(KC_LEFT),       LCTL(KC_RGHT),                   
-                                                                          LCTL(KC_SPC), LALT(SGUI(KC_U)), 		RESET, KC_END
+____,  LALT(LGUI(KC_ESC)), KC_ACL0,   KC_ACL1,     KC_ACL2,    ____,          																					               KC_PWR,      KC_ACL0,      KC_ACL1,             KC_ACL2,          ____,    ____,  
+____,  HYPR(KC_R),         KC_WH_R,   KC_MS_U,     KC_WH_L,    LSFT(LCA(KC_SPC)),      																                 KC_BTN3, 		KC_HOME,      KC_END,              LGUI(KC_QUOT), KC_VOLU, ____,
+____,  RALT(RGUI(KC_G)),   KC_MS_L,   KC_MS_D,     KC_MS_R,    LCS(KC_SPC),      																			                 KC_PGUP,     KC_BTN1,      KC_BTN2,             SGUI(KC_QUOT), KC_VOLD, KC_ENT,
+____,  LCTL(KC_F),         HookCpyLk, HookCpyMDLk, HookToLink, LCTL(LGUI(KC_SPC)),																			               KC_PGDN,     KC_WH_D,      KC_WH_U,             SGUI(KC_SLSH), KC_MUTE, ____,
+                           KC_HOME,   KC_END,                  LOWER,          		 Hook,  		   KC_BSPC, 						KC_DEL, KC_NO,   RAISE,                     LCTL(KC_LEFT),       LCTL(KC_RGHT),                   
+                                                                                   LCTL(KC_SPC), LALT(SGUI(KC_U)), 		RESET, KC_END
 ),
 
 [_LOWER] = LAYOUT_5x6_5_gilles(
@@ -182,9 +187,9 @@ ____,  LCTL(KC_F),         KC_PGUP, KC_F10,  KC_PGDN, LCTL(LGUI(KC_SPC)),							
 
 [_ARROW] = LAYOUT_5x6_5_gilles( \
   // left hand
-  TO(_BASE),       ____,            ____,         ____,       ____,       KC_BSPC,            																				                      KC_DEL,        			 ____,                   ____,               ____,           ____,    KC_BSPC,
-  TO(_BASE),       ____,            LCTL(KC_1),   LCTL(KC_2), WkfyMirror, KC_DEL,            																					                      BP_AT,         			 LALT(LGUI(LSFT(KC_V))), LCTL(LSFT(KC_TAB)), LCTL(KC_TAB),   ____,    BP_Z,
-  ____,            ____,            KC_LCTRL,     KC_LALT,    KC_LGUI,    KC_ENT,            																				                        KC_TILD,       			 KC_LEFT,                KC_UP,              KC_DOWN,        KC_RGHT, KC_ENT,
+  TO(_BASE),       ____,            ____,         ____,       ____,       KC_NO,            																				                      KC_DEL,        			 ____,                   ____,               ____,           ____,    KC_BSPC,
+  TO(_BASE),       ____,            LCTL(KC_1),   LCTL(KC_2), WkfyMirror, KC_BSPC,            																					                      BP_AT,         			 LALT(LGUI(LSFT(KC_V))), LCTL(LSFT(KC_TAB)), LCTL(KC_TAB),   ____,    BP_Z,
+  ____,            ____,            KC_LCTRL,     KC_LALT,    KC_LGUI,    HookCpyMDLk,            																				                        KC_TILD,       			 KC_LEFT,                KC_UP,              KC_DOWN,        KC_RGHT, KC_ENT,
   RESET,           ____,            ____,         REDO,       UNDO,       LGUI(KC_TAB),            																	                        LSFT(BP_QUOT), 			 KC_GRV,                 WkfyMovUp,          WkfyMovDw,			 ____,    ____,
                                                   ____,       ____,				SGUI(KC_LEFT), LSFT_T(KC_SPC), KC_BSPC,               RALT_T(KC_BSPC), KC_LSHIFT, LALT(LSFT(KC_LEFT)),                         WkfyPreNod,         WkfyNxtNod,
                                                                                          LGUI(BP_X),     LALT(SGUI(KC_U)), 			KC_LALT,         ____
