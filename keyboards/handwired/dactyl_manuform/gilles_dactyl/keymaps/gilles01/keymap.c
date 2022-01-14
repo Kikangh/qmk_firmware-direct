@@ -187,12 +187,12 @@ ____,  LCTL(KC_F),         HookCpyLk, HookCpyMDLk, HookToLink, LCTL(LGUI(KC_SPC)
 
 [_ARROW] = LAYOUT_5x6_5_gilles( \
   // left hand
-  TO(_BASE),       ____,            ____,         ____,       ____,       KC_NO,            																				                      KC_DEL,        			 ____,                   ____,               ____,           ____,    KC_BSPC,
-  TO(_BASE),       ____,            LCTL(KC_1),   LCTL(KC_2), WkfyMirror, KC_BSPC,            																					                      BP_AT,         			 LALT(LGUI(LSFT(KC_V))), LCTL(LSFT(KC_TAB)), LCTL(KC_TAB),   ____,    BP_Z,
-  ____,            ____,            KC_LCTRL,     KC_LALT,    KC_LGUI,    HookCpyMDLk,            																				                        KC_TILD,       			 KC_LEFT,                KC_UP,              KC_DOWN,        KC_RGHT, KC_ENT,
-  RESET,           ____,            ____,         REDO,       UNDO,       LGUI(KC_TAB),            																	                        LSFT(BP_QUOT), 			 KC_GRV,                 WkfyMovUp,          WkfyMovDw,			 ____,    ____,
-                                                  ____,       ____,				SGUI(KC_LEFT), LSFT_T(KC_SPC), KC_BSPC,               RALT_T(KC_BSPC), KC_LSHIFT, LALT(LSFT(KC_LEFT)),                         WkfyPreNod,         WkfyNxtNod,
-                                                                                         LGUI(BP_X),     LALT(SGUI(KC_U)), 			KC_LALT,         ____
+  TO(_BASE),       ____,            ____,          ____,          ____,       KC_NO,            																				                      KC_DEL,        			 ____,                   ____,               ____,           ____,    KC_BSPC,
+  TO(_BASE),       ____,            LCTL(KC_LEFT), LCTL(KC_RGHT), WkfyMirror, KC_BSPC,            																					                      BP_AT,         			 LALT(LGUI(LSFT(KC_V))), LCTL(LSFT(KC_TAB)), LCTL(KC_TAB),   ____,    BP_Z,
+  ____,            ____,            KC_LCTRL,      KC_LALT,       KC_LGUI,    HookCpyMDLk,            																				                        KC_TILD,       			 KC_LEFT,                KC_UP,              KC_DOWN,        KC_RGHT, KC_ENT,
+  RESET,           ____,            ____,          REDO,          UNDO,       LGUI(KC_TAB),            																	                        LSFT(BP_QUOT), 			 KC_GRV,                 WkfyMovUp,          WkfyMovDw,			 ____,    ____,
+                                                   ____,          ____,				SGUI(KC_LEFT), LSFT_T(KC_SPC), KC_BSPC,               RALT_T(KC_BSPC), KC_LSHIFT, LALT(LSFT(KC_LEFT)),                         WkfyPreNod,         WkfyNxtNod,
+                                                                                             LGUI(BP_X),     LALT(SGUI(KC_U)), 			KC_LALT,         ____
 // Right hand
 
 ),

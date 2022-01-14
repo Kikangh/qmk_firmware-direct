@@ -10,6 +10,8 @@ COMB(VT_BKSP,			KC_BSPC,			KC_U, RGUI_T(KC_J))
 COMB(DS_Z,				BP_Z,				KC_I, RALT_T(KC_K))
 COMB(TQ_W,				BP_W,				RGUI_T(KC_J), KC_M)
 COMB(CT_B,				BP_B,				KC_H, RGUI_T(KC_J))
+COMB(SG_M,				BP_M,				RALT_T(KC_K), BP_G)
+COMB(RH_CCED,			KC_BSLS,			RCTL_T(KC_L), BP_H)
 // Functions
 COMB(Edot_UNDO,   		LGUI(BP_Z),   		LGUI_T(KC_F), KC_V)
 COMB(IX_REDO,   		SGUI(BP_Z),   		LALT_T(KC_D), KC_C)
