@@ -1,28 +1,50 @@
 // Using bepo letters in name. Chord Keys must match exactly was is typed in base layer in keymap.c
 //   name     			result    			chord keys
-COMB(SITA_ESC,  		KC_ESC,   			KC_TAB, KC_LSFT)
+COMB(ShiftTab_ESC,  	KC_ESC,   			KC_TAB, KC_LSFT)
+COMB(ShiftTab_ESC2,  	KC_ESC,   			KC_TAB, KC_LSHIFT) // For Moonlander
+COMB(ShiftTab_ESC3,  	KC_ESC,   			KC_TAB, BP_B) // For Moonlander
 COMB(YXDOT_ESC, 		KC_ESC,   			KC_X, KC_C, KC_V)
+COMB(YXDOT_ESC2, 		KC_ESC,				BP_Y, BP_X, BP_DOT) // For Moonlander
 COMB(CApos_ENT,			KC_ENT,				KC_H, KC_N)
+COMB(CApos_ENT2,		KC_ENT,				BP_C, BP_APOS) // For Moonlander
 COMB(ComK_ENT,			KC_ENT,				BP_COMM, KC_B)
+COMB(ComK_ENT2,			KC_ENT,				BP_COMM, BP_K) // For Moonlander
 COMB(CircC_DEL,			KC_DEL,				KC_Y, KC_H)
+COMB(CircC_DEL2,		KC_DEL,				KC_Y, BP_C) // For Moonlander
 COMB(VT_BKSP,			KC_BSPC,			KC_U, RGUI_T(KC_J))
+COMB(VT_BKSP2,			KC_BSPC,			BP_V, RGUI_T(BP_T)) // For Moonlander
 // Lettres
 COMB(DS_Z,				BP_Z,				KC_I, RALT_T(KC_K))
+COMB(DS_Z2,				BP_Z,				BP_D, RALT_T(BP_S)) // For Moonlander
 COMB(TQ_W,				BP_W,				RGUI_T(KC_J), KC_M)
-COMB(CT_B,				BP_B,				KC_H, RGUI_T(KC_J))
+COMB(TQ_W2,				BP_W,				RGUI_T(BP_T), BP_Q) // For Moonlander
+COMB(CT_B,				BP_B,				KC_N, KC_M)
+COMB(CT_B2,				BP_B,				BP_APOS, BP_Q) // For Moonlander
 COMB(SG_M,				BP_M,				RALT_T(KC_K), BP_G)
+COMB(SG_M,				BP_M,				RALT_T(BP_S), BP_G) // For Moonlander
 COMB(RH_CCED,			KC_BSLS,			RCTL_T(KC_L), BP_H)
+COMB(RH_CCED,			KC_BSLS,			RCTL_T(BP_R), BP_H) // For Moonlander
 // Functions
 COMB(Edot_UNDO,   		LGUI(BP_Z),   		LGUI_T(KC_F), KC_V)
+COMB(Edot_UNDO2,   		LGUI(BP_Z),   		LGUI_T(BP_E), BP_DOT) // For Moonlander
 COMB(IX_REDO,   		SGUI(BP_Z),   		LALT_T(KC_D), KC_C)
+COMB(IX_REDO2,   		SGUI(BP_Z),   		LALT_T(BP_I), BP_X) // For Moonlander
 COMB(EU_CUT,			LGUI(BP_X),			LCTL_T(KC_S), KC_W)
+COMB(EU_CUT2,			LGUI(BP_X),			LCTL_T(BP_U), BP_ECUT) // For Moonlander
 COMB(PI_COPY,			LGUI(BP_C),			LALT_T(KC_D), KC_E)
+COMB(PI_COPY2,			LGUI(BP_C),			LALT_T(BP_I), BP_P) // For Moonlander
 COMB(OE_PASTE,			LGUI(BP_V),			LGUI_T(KC_F), KC_R)
+COMB(OE_PASTE2,			LGUI(BP_V),			LGUI_T(BP_E), BP_O) // For Moonlander
 COMB(EaccVirg_PASTESF,  LALT(SGUI(BP_V)),	KC_T, KC_G)
+COMB(EaccVirg_PASTESF2, LALT(SGUI(BP_V)),	BP_EGRV, BP_COMM) // For Moonlander
 TOGG(ARROW,				_ARROW,				KC_W, KC_E, KC_R)
-COMB(EVir_CMDTAB,		LGUI(KC_TAB),		LGUI_T(KC_F), KC_G)
-COMB(DotK_TAB,			KC_TAB,				KC_V, KC_B)
-COMB(AposQ_SftTAB,		LSFT(KC_TAB),		KC_N, KC_M)
+TOGG(ARROW2,			_ARROW,				BP_ECUT, BP_P, BP_O) // For Moonlander
+COMB(DotK_CMDTAB,		LGUI(KC_TAB),		KC_V, KC_B)
+COMB(DotK_CMDTAB2,		LGUI(KC_TAB),		BP_DOT, BP_K) // For Moonlander
+COMB(EVir_TAB,			KC_TAB,				LGUI_T(KC_F), KC_G)
+COMB(EVir_TAB2,			KC_TAB,				LGUI_T(BP_E), BP_COMM) // For Moonlander
+COMB(CT_SftTAB,			LSFT(KC_TAB),		KC_H, RGUI_T(KC_J))
+COMB(CT_SftTAB2,		LSFT(KC_TAB),		BP_C, RGUI_T(BP_T)) // For Moonlander
 // COMB(JKL_SPC,  		KC_SPC,   		KC_J, KC_K, KC_L)
 // COMB(BSSL_CLR, 		KC_NO,    		KC_BSPC, KC_LSFT) // using KC_NO as the resulting keycode is the same as COMBO_ACTION before.
 // COMB(QW_UNDO,  		C(KC_Z),  		KC_Q, KC_W)
