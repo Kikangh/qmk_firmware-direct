@@ -20,7 +20,6 @@ COMB(PI_COPY,			LGUI(BP_C),			LALT_T(KC_D), KC_E)
 COMB(OE_PASTE,			LGUI(BP_V),			LGUI_T(KC_F), KC_R)
 COMB(EaccVirg_PASTESF,  LALT(SGUI(BP_V)),	KC_T, KC_G)
 TOGG(ARROW,				_ARROW,				KC_W, KC_E, KC_R)
-TOGG(BASE,				_BASE,				LCTL(KC_1), LCTL(KC_2), WkfyMirror) // latest test shows that this does not seem to work.
 COMB(EVir_CMDTAB,		LGUI(KC_TAB),		LGUI_T(KC_F), KC_G)
 COMB(DotK_TAB,			KC_TAB,				KC_V, KC_B)
 COMB(AposQ_SftTAB,		LSFT(KC_TAB),		KC_N, KC_M)
