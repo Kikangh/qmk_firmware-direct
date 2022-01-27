@@ -21,9 +21,9 @@ COMB(TQ_W2,				BP_W,				RGUI_T(BP_T), BP_Q) // For Moonlander
 COMB(CT_B,				BP_B,				KC_N, KC_M)
 COMB(CT_B2,				BP_B,				BP_APOS, BP_Q) // For Moonlander
 COMB(SG_M,				BP_M,				RALT_T(KC_K), BP_G)
-COMB(SG_M,				BP_M,				RALT_T(BP_S), BP_G) // For Moonlander
+COMB(SG_M2,				BP_M,				RALT_T(BP_S), BP_G) // For Moonlander
 COMB(RH_CCED,			KC_BSLS,			RCTL_T(KC_L), BP_H)
-COMB(RH_CCED,			KC_BSLS,			RCTL_T(BP_R), BP_H) // For Moonlander
+COMB(RH_CCED2,			KC_BSLS,			RCTL_T(BP_R), BP_H) // For Moonlander
 // Functions
 COMB(Edot_UNDO,   		LGUI(BP_Z),   		LGUI_T(KC_F), KC_V)
 COMB(Edot_UNDO2,   		LGUI(BP_Z),   		LGUI_T(BP_E), BP_DOT) // For Moonlander

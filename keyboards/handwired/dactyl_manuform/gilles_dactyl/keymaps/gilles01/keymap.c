@@ -22,6 +22,7 @@
 
 #include QMK_KEYBOARD_H
 #include "keymap_bepo.h"
+#include "keymap_old_bepo_defs.h"
 
 
 extern keymap_config_t keymap_config;
