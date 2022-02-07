@@ -23,3 +23,16 @@
 
 // Added for combo support
 #define COMBO_VARIABLE_LEN
+
+#undef PERMISSIVE_HOLD
+
+#define IGNORE_MOD_TAP_INTERRUPT
+
+#define TAPPING_FORCE_HOLD
+
+#undef RETRO_TAPPING
+
+
+#define TAPPING_TOGGLE  1
+
+#define PREVENT_STUCK_MODIFIERS

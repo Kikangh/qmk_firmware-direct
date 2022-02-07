@@ -5,7 +5,7 @@
 #include "keymap_french.h"  
 #include "keymap_bepo.h"
 #include "keymap_us_international.h"
-#include "keymap_old_bepo_defs.h"
+#include "keymap_old_bepo_defs.h" // Options added for combo and deprecated bepo keycodes support :
 
 #define KC_MAC_UNDO LGUI(KC_Z)
 #define KC_MAC_CUT LGUI(KC_X)
@@ -46,16 +46,16 @@ enum custom_keycodes {
 };
 
 // Options added for combo and deprecated bepo keycodes support :
-// #include "old_keymap_bepo.h"
 
-// these keycodes exist in my combo def (trying to have the same version for moonlander and dactylmanuform).
-#define _BASE 0
-#define _ARROW 1
-#define WkfyMirror LGUI(LSFT(BP_M)) 
-
-//combo specific declaration and parameters :
-#include "g/keymap_combo.h"
-#define COMBO_ONLY_FROM_LAYER _BASE
+    // these keycodes exist in my combo def (trying to have the same version for moonlander and dactylmanuform).
+    #define _BASE 0
+    #define _ARROW 1
+    #define WkfyMirror LGUI(LSFT(BP_M))
+    #define ALF_CLIP_HIST LALT(LGUI(BP_C))
+    
+    //combo specific declaration and parameters :
+    #include "g/keymap_combo.h"
+    #define COMBO_ONLY_FROM_LAYER _BASE
 
 enum tap_dance_codes {
   DANCE_0,
@@ -65,10 +65,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_moonlander(
     KC_ESCAPE,      BP_DQOT,        BP_LGIL,        BP_RGIL,        BP_LPRN,        BP_RPRN,        KC_BSPACE,                                      KC_DELETE,      BP_AT,          BP_PLUS,        BP_MINS,        BP_SLSH,        BP_ASTR,        KC_BSPACE,      
     KC_TAB,         BP_B,           BP_ECUT,        BP_P,           BP_O,           BP_EGRV,        RGB_TOG,                                        KC_BSPACE,      KC_Y,           BP_V,           BP_D,           BP_L,           BP_J,           BP_Z,           
-    KC_LSHIFT,      LT(1,BP_A),     LCTL_T(BP_U),   LALT_T(BP_I),   LGUI_T(BP_E),   BP_COMM,        LALT(LGUI(BP_C)),                                                                KC_ENTER,       BP_C,           RGUI_T(BP_T),   RALT_T(BP_S),   RCTL_T(BP_R),   RSFT_T(BP_N),   BP_M,           
-    TD(DANCE_0),    BP_AGRV,        BP_Y,           BP_X,           BP_DOT,         BP_K,                                           BP_APOS,        BP_Q,           BP_G,           BP_H,           BP_F,           BP_CCED,        
-    KC_F3,          TG(4),          OSL(3),         LT(3,KC_UP),    LSFT_T(KC_ENTER),LGUI(KC_SPACE),                                                                                                 RCTL(KC_SPACE), LT(4,BP_W),     KC_LEFT,        KC_RIGHT,       RCTL(KC_LEFT),  RCTL(KC_RIGHT), 
-    LGUI_T(KC_SPACE),LGUI(BP_C),     LGUI(BP_V),                     LCTL(LGUI(LSFT(BP_LPRN))),BP_Z,           LT(2,KC_SPACE)
+    KC_LSHIFT,      LT(1,BP_A),     LCTL_T(BP_U),   LALT_T(BP_I),   LGUI_T(BP_E),   BP_COMM,        LALT(LGUI(BP_C)),                               KC_ENTER,       BP_C,           RGUI_T(BP_T),   RALT_T(BP_S),   RCTL_T(BP_R),   RSFT_T(BP_N),   BP_M,           
+    TD(DANCE_0),    BP_AGRV,        BP_Y,           BP_X,           BP_DOT,         BP_K,                                                           BP_APOS,        BP_Q,           BP_G,           BP_H,           BP_F,           BP_CCED,        
+    KC_F3,          TG(4),          OSL(3),         LT(3,ALF_CLIP_HIST),    LSFT_T(KC_ENTER),LGUI(KC_SPACE),                                                                                                 RCTL(KC_SPACE), LT(4,BP_W),     KC_LEFT,        KC_RIGHT,       RCTL(KC_LEFT),  RCTL(KC_RIGHT), 
+                                                                                LGUI_T(KC_SPACE),LGUI(BP_C),     LGUI(BP_V),                     LCTL(LGUI(LSFT(BP_LPRN))),BP_Z,           LT(2,KC_SPACE)
   ),
   [1] = LAYOUT_moonlander(
     TO(0),          KC_TRANSPARENT, KC_TRANSPARENT, TO(4),          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, ST_MACRO_0,     ST_MACRO_1,     ST_MACRO_2,     ST_MACRO_3,     ST_MACRO_4,     KC_TRANSPARENT, 
