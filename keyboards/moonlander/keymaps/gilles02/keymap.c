@@ -71,7 +71,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,         BP_B,           BP_ECUT,        BP_P,           BP_O,           BP_EGRV,        RGB_TOG,                                        KC_BSPACE,      KC_Y,           BP_V,           BP_D,           BP_L,           BP_J,           BP_Z,           
     KC_LSHIFT,      LT(1,BP_A),     MT(MOD_LCTL, BP_U),MT(MOD_LALT, BP_I),MT(MOD_LGUI, BP_E),BP_COMM,        LALT(LGUI(BP_C)),                                                                KC_ENTER,       BP_C,           MT(MOD_RGUI, BP_T),MT(MOD_RALT, BP_S),MT(MOD_RCTL, BP_R),MT(MOD_RSFT, BP_N),BP_M,           
     TD(DANCE_0),    BP_AGRV,        BP_Y,           BP_X,           BP_DOT,         BP_K,                                           BP_APOS,        BP_Q,           BP_G,           BP_H,           BP_F,           BP_CCED,        
-    KC_F3,          TG(4),          OSL(3),         TD(DANCE_1),    MT(MOD_LSFT, KC_ENTER),LGUI(KC_SPACE),                                                                                                 RCTL(KC_SPACE), LT(4,BP_W),     RCTL(KC_SPACE), KC_RIGHT,       RCTL(KC_LEFT),  RCTL(KC_RIGHT), 
+    KC_F3,          TG(4),          OSL(3),         LT(3,ALFRED_CLIP_HIST),    MT(MOD_LSFT, BP_B),LGUI(KC_SPACE),                                                                                                 RCTL(KC_SPACE), LT(4,BP_W),     RCTL(KC_SPACE), KC_RIGHT,       RCTL(KC_LEFT),  RCTL(KC_RIGHT), 
     MT(MOD_LGUI, KC_SPACE),LGUI(BP_C),     LGUI(BP_V),                     LGUI(LCTL(LSFT(BP_LPRN))),BP_Z,           LT(2,KC_SPACE)
   ),
   [1] = LAYOUT_moonlander(
