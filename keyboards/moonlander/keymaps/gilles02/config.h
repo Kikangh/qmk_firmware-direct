@@ -4,7 +4,7 @@
 */
 #define ORYX_CONFIGURATOR
 #undef TAPPING_TERM
-#define TAPPING_TERM 250
+#define TAPPING_TERM 240
 
 #define TAPPING_FORCE_HOLD
 
