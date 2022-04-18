@@ -6,6 +6,7 @@
 #include "keymap_bepo.h"
 #include "keymap_us_international.h"
 #include "keymap_old_bepo_defs.h" // Options added for combo and deprecated bepo keycodes support :
+#include "keymap_optimot.h" // pour disposer des keycodes Optimot
 
 #define KC_MAC_UNDO LGUI(KC_Z)
 #define KC_MAC_CUT LGUI(KC_X)
@@ -71,17 +72,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ESCAPE,            BP_DQOT,        BP_LGIL,            BP_RGIL,            BP_LPRN,            BP_RPRN,        KC_BSPACE,                                                                                                              KC_DELETE, BP_AT,   BP_PLUS,            BP_MINS,        BP_SLSH,        BP_ASTR,        KC_BSPACE,      
     KC_TAB,               BP_B,           BP_ECUT,            BP_P,               BP_O,               BP_EGRV,        RGB_TOG,                                                                                                                KC_BSPACE, KC_Y,    BP_V,               BP_D,           BP_L,           BP_J,           BP_Z,           
     MT(MOD_LSFT, KC_F10), LT(1,BP_A),     MT(MOD_LCTL, BP_U), MT(MOD_LALT, BP_I), MT(MOD_LGUI, BP_E), BP_COMM,        LALT(LGUI(BP_C)),                                                                                                       KC_ENTER,  BP_C,    MT(MOD_RGUI, BP_T), MT(MOD_RALT, BP_S),MT(MOD_RCTL, BP_R),MT(MOD_RSFT, BP_N),BP_M,           
-    TD(DANCE_0),          BP_AGRV,        BP_Y,               BP_X,               BP_DOT,             LT(5,BP_K),                                                                                                                                        BP_APOS, BP_Q,               BP_G,           BP_H,           BP_F,           BP_CCED,        
-    KC_F3,                TG(4),          OSL(3),             TD(DANCE_2),        MT(MOD_LSFT, KC_LBRC),                                   LGUI(KC_SPACE),                                                                RCTL(KC_SPACE),                            LT(4,KC_ENTER),         RCTL(KC_SPACE), KC_RIGHT,       RCTL(KC_LEFT),  RCTL(KC_RIGHT), 
-                                                                                                                          MT(MOD_LGUI, KC_SPACE), LGUI(KC_M),     LGUI(KC_SLSH),           LGUI(LCTL(LSFT(BP_LPRN))),KC_BSLS, LT(2,KC_SPACE)
+    TD(DANCE_0),          BP_AGRV,        BP_Y,               BP_X,               BP_DOT,             LT(5,BP_K),                                                                                                                                        BP_APOS, BP_Q,               BP_G,           BP_H,           BP_F,           BP_W,        
+    KC_F3,                TG(4),          OSL(3),             TD(DANCE_2),        MT(MOD_LSFT, OP_X),                                   LGUI(KC_SPACE),                                                                RCTL(KC_SPACE),                            LT(4,KC_ENTER),         RCTL(KC_SPACE), KC_RIGHT,       RCTL(KC_LEFT),  RCTL(KC_RIGHT), 
+                                                                                                                          MT(MOD_LGUI, KC_SPACE), LGUI(OP_C),     LGUI(OP_V),           LGUI(LCTL(LSFT(BP_LPRN))),KC_BSLS, LT(2,KC_SPACE)
   ),
   [1] = LAYOUT_moonlander(
-    TO(0),          KC_TRANSPARENT, KC_TRANSPARENT, TO(4),          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                  KC_TRANSPARENT, ST_MACRO_0,     ST_MACRO_1,                ST_MACRO_2,     ST_MACRO_3,     ST_MACRO_4,     KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_TRANSPARENT, LCTL(BP_DQOT),  LCTL(BP_LGIL),  LGUI(LSFT(BP_M)),KC_BSPACE,      KC_DELETE,                                      KC_TRANSPARENT, BP_AT,          LGUI(LCTL(LSFT(BP_DOT))),  LCTL(LSFT(KC_TAB)),LCTL(KC_TAB),   KC_TRANSPARENT, BP_W,           
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_LCTRL,       KC_LALT,        KC_LGUI,        LALT(LGUI(LSFT(KC_SPACE))),LGUI(KC_F12),                         KC_TRANSPARENT, BP_HASH,        KC_LEFT,                   KC_UP,          KC_DOWN,        KC_RIGHT,       KC_F10,         
-    RESET,          KC_TRANSPARENT, KC_TRANSPARENT, LGUI(LSFT(BP_Z)),LGUI(BP_Z),     LGUI(KC_TAB),                                                                   LSFT(BP_APOS),  BP_DLR,                    LGUI(LSFT(KC_UP)),LGUI(LSFT(KC_DOWN)),LGUI(LSFT(LALT(BP_F))),RALT(RGUI(RCTL(BP_T))),
-    KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          MT(MOD_LSFT, KC_ENTER),LALT(LSFT(KC_LEFT)),                                                                      LGUI(LSFT(KC_LEFT)),KC_NO, LCTL(LSFT(BP_SLSH)),LCTL(LSFT(BP_ASTR)),KC_TRANSPARENT, KC_TRANSPARENT, 
-    MT(MOD_LSFT, KC_SPACE),LGUI(BP_X),     LALT(LGUI(LSFT(BP_V))),                LGUI(LSFT(BP_LPRN)),KC_HOME,        KC_END
+    TO(0),          KC_TRANSPARENT, KC_TRANSPARENT, TO(4),            KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                  KC_TRANSPARENT, ST_MACRO_0,     ST_MACRO_1,                ST_MACRO_2,     ST_MACRO_3,     ST_MACRO_4,     KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, LCTL(BP_DQOT),  LCTL(BP_LGIL),    LGUI(LSFT(BP_M)),KC_BSPACE,      KC_DELETE,                                      KC_TRANSPARENT, BP_AT,          LGUI(LCTL(LSFT(BP_DOT))),  LCTL(LSFT(KC_TAB)),LCTL(KC_TAB),   KC_TRANSPARENT, BP_W,           
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_LCTRL,       KC_LALT,          KC_LGUI,        LALT(LGUI(LSFT(KC_SPACE))),LGUI(KC_F12),                         KC_TRANSPARENT, BP_HASH,        KC_LEFT,                   KC_UP,          KC_DOWN,        KC_RIGHT,       KC_F10,         
+    RESET,          KC_TRANSPARENT, KC_TRANSPARENT, LGUI(LSFT(BP_Z)), LGUI(BP_Z),     LGUI(KC_TAB),                                                                   LSFT(BP_APOS),  BP_DLR,                    LGUI(LSFT(KC_UP)),LGUI(LSFT(KC_DOWN)),LGUI(LSFT(LALT(BP_F))),RALT(RGUI(RCTL(BP_T))),
+    KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,            MT(MOD_LSFT, KC_ENTER),LALT(LSFT(KC_LEFT)),                                                                      LGUI(LSFT(KC_LEFT)),KC_NO, LCTL(LSFT(BP_SLSH)),LCTL(LSFT(BP_ASTR)),KC_TRANSPARENT, KC_TRANSPARENT, 
+                                                              MT(MOD_LSFT, KC_SPACE),LGUI(OP_X),     LALT(LGUI(LSFT(OP_V))),                LGUI(LSFT(KC_4)),KC_HOME,        KC_END
   ),
   [2] = LAYOUT_moonlander(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_F2,          KC_F3,          KC_F4,          KC_F5,          KC_TRANSPARENT,                                 KC_NO,          KC_F6,          KC_F7,          KC_F8,          KC_F9,          KC_F10,         KC_TRANSPARENT, 
