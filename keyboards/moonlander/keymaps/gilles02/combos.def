@@ -20,22 +20,23 @@ COMB(TQ_W2,				BP_W,				MT(MOD_RGUI, BP_T), BP_Q) // For Moonlander Opt_CCed
 COMB(CT_B,				BP_B,				KC_N, KC_M)
 COMB(CT_B2,				BP_B,				BP_APOS, BP_Q) // For Moonlander
 COMB(SG_M,				BP_M,				RALT_T(KC_K), BP_G)
-COMB(SG_M2,				KC_QUOTE,				MT(MOD_RALT, BP_S), BP_G) // For Moonlander
+COMB(SG_M2,				KC_QUOTE,			MT(MOD_RALT, BP_S), BP_G) // For Moonlander
 COMB(RH_CCED,			KC_BSLS,			RCTL_T(KC_L), BP_H)
-COMB(RH_CCED2,			KC_BSLS,			MT(MOD_RCTL, BP_R), BP_H) // For Moonlander
+COMB(RH_CCED2,			OP_CCED,			MT(MOD_RCTL, BP_R), BP_H) // For Moonlander
+COMB(OPTIMOT_X,				OP_X,				MT(MOD_LALT, BP_I), BP_X) // For Moonlander
 // Functions
 COMB(Edot_UNDO,   		LGUI(BP_Z),		   	KC_G, KC_B)
-COMB(Edot_UNDO2,   		LGUI(BP_Z),   		BP_COMM, LT(5,BP_K)) // For Moonlander
+COMB(Edot_UNDO2,   		LGUI(OP_Z),   		BP_COMM, LT(5,BP_K)) // For Moonlander
 COMB(IX_REDO,   		SGUI(BP_Z),   		LALT_T(KC_D), KC_C)
-COMB(IX_REDO2,   		SGUI(BP_Z),   		MT(MOD_LALT, BP_I), BP_X) // For Moonlander
+COMB(IX_REDO2,   		SGUI(OP_Z),   		MT(MOD_LCTL, OP_I), BP_Y) // For Moonlander
 COMB(EU_CUT,			LGUI(BP_X),			LCTL_T(KC_S), KC_W)
-COMB(EU_CUT2,			LGUI(KC_LBRC),			MT(MOD_LCTL, BP_U), BP_ECUT) // For Moonlander 
+COMB(EU_CUT2,			LGUI(OP_X),			MT(MOD_LCTL, OP_I), BP_ECUT) // For Moonlander 
 COMB(PI_COPY,			LGUI(BP_C),			LALT_T(KC_D), KC_E)
-COMB(PI_COPY2,			LGUI(KC_M),			MT(MOD_LALT, BP_I), BP_P) // For Moonlander
+COMB(PI_COPY2,			LGUI(OP_C),			MT(MOD_LALT, BP_I), BP_P) // For Moonlander
 COMB(OE_PASTE,			LGUI(BP_V),			LGUI_T(KC_F), KC_R)
-COMB(OE_PASTE2,			LGUI(KC_SLSH),			MT(MOD_LGUI, BP_E), BP_O) // For Moonlander
+COMB(OE_PASTE2,			LGUI(OP_V),		MT(MOD_LGUI, BP_E), BP_O) // For Moonlander
 COMB(EaccVirg_PASTESF,  LALT(SGUI(BP_V)),	KC_T, KC_G)
-COMB(EaccVirg_PASTESF2, LALT(SGUI(KC_SLSH)),	BP_EGRV, BP_COMM) // For Moonlander
+COMB(EaccVirg_PASTESF2, LALT(SGUI(OP_V)),	BP_EGRV, BP_COMM) // For Moonlander
 TOGG(ARROW,				_ARROW,				KC_W, KC_E, KC_R)
 TOGG(ARROW2,			_ARROW,				BP_ECUT, BP_P, BP_O) // For Moonlander
 COMB(DotK_CMDTAB,		LGUI(KC_TAB),		KC_V, KC_B)

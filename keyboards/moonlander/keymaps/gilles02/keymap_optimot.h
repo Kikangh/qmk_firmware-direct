@@ -74,12 +74,11 @@
 #define OP_CIR  KC_QUOT // ^
 #define OP_Z    KC_BSLS // Z
 // Row 4
-#define OP_K    KC_NUBS // K
-#define OP_Y    KC_Z    // Y
-#define OP_EGRV KC_X    // È
-#define OP_DOT  KC_C    // .
-#define OP_W    KC_V    // W
-#define OP_B    KC_B    // @TODO ?? backspace ??
+#define OP_K    KC_Z // K
+#define OP_Y    KC_X    // Y
+#define OP_EGRV KC_C    // È
+#define OP_DOT  KC_V    // .
+#define OP_W    KC_B    // W
 #define OP_G    KC_N    // G
 #define OP_C    KC_M    // C
 #define OP_M    KC_COMM // M
@@ -142,7 +141,7 @@
 #define OP_DLQU ALGR(OP_DQUO) // „
 #define OP_LBRC ALGR(OP_LPRN) // [
 #define OP_RBRC ALGR(OP_RPRN) // ]
-#define OP_AT   ALGR(OP_PERC) // @
+#define OP_AT   RALT(OP_PERC) // @
 #define OP_PLMN ALGR(OP_PLUS) // ±
 #define OP_MMNS ALGR(OP_MINS) // −
 #define OP_NEQL ALGR(OP_EQL)  // ≠
@@ -163,7 +162,7 @@
 #define OP_PIPE ALGR(OP_X)    // |
 #define OP_WTRA ALGR(OP_CCED) // ➼
 // Row 3
-#define OP_AE   ALGR(OP_A)    // Æ
+// #define OP_AE   ALGR(OP_A)    // Æ
 #define OP_DIAE ALGR(OP_I)    // ¨ (dead)
 #define OP_LIGA ALGR(OP_E)    // ᵉ
 #define OP_UGRV ALGR(OP_U)    // ù
@@ -171,24 +170,24 @@
 #define OP_LSQU ALGR(OP_P)    // `
 #define OP_AMPR ALGR(OP_T)    // &
 #define OP_INFI ALGR(OP_S)    // ∞
-#define OP_DTIL ALGR(OP_R)    // L @TODO je sais pas comment s'appelle ce caractère
+// #define OP_DTIL ALGR(OP_R)    // L @TODO je sais pas comment s'appelle ce caractère
 #define OP_DTIL ALGR(OP_N)    // ~ (dead)
 #define OP_IEXL ALGR(OP_CIR)  // ¡
-#define OP_NDSH ALGR(OP_Z)    // –
+// #define OP_NDSH ALGR(OP_Z)    // –
 // Row 4
 #define OP_BARR ALGR(OP_K)    //  ̸
 #define OP_DOTB ALGR(OP_Y)    //  ̣
 #define OP_GRV  ALGR(OP_EGRV) // `
 #define OP_ELLP ALGR(OP_DOT)  // …
 #define OP_BULL ALGR(OP_W)    // •
-#define OP_NONE ALGR(OP_B)    // ???? @TODO y'a quoi ici ?
+// #define OP_NONE ALGR(OP_B)    // ???? @TODO y'a quoi ici ?
 #define OP_DGRK ALGR(OP_G)    // µ (dead)
 #define OP_DCMM ALGR(OP_C)    //  ̦
 #define OP_MACR ALGR(OP_M)    // ¯
 #define OP_BREV ALGR(OP_H)    // ˘ (dead)
 #define OP_CARN ALGR(OP_V)    // ˇ (dead)
 // Row 5
-#define OP_UNDS ALGR(KC_SPC)  // _ @TODO qu'est-ce qu'il y a ici ?
+// #define OP_UNDS ALGR(KC_SPC)  // _ @TODO qu'est-ce qu'il y a ici ?
 
 /* Shift+AltGr symbols
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
@@ -220,7 +219,7 @@
 // Row 2
 #define OP_LEQL S(ALGR(OP_AGRV)) // ⩽
 #define OP_GEQL S(ALGR(OP_J))    // ⩾
-#define OP_OE   S(ALGR(OP_O))    // Œ
+// #define OP_OE   S(ALGR(OP_O))    // Œ
 #define OP_SECT S(ALGR(OP_EACU)) // §
 #define OP_PARA S(ALGR(OP_B))    // ¶
 #define OP_FSTA S(ALGR(OP_F))    // ✦
@@ -234,7 +233,7 @@
 #define OP_AE   S(ALGR(OP_A)    // Æ
 #define OP_HORN S(ALGR(OP_I)    //  ̛ (dead)
 #define OP_HOKA S(ALGR(OP_E)    //  ̉ (dead)
-#define OP_UGRV S(ALGR(OP_U)    // Ù
+// #define OP_UGRV S(ALGR(OP_U)    // Ù
 #define OP_CHEC S(ALGR(OP_COMM) // ✓
 #define OP_TSAS S(ALGR(OP_P)    // ✻
 #define OP_LWBA S(ALGR(OP_T)    // ⬅
@@ -242,18 +241,21 @@
 #define OP_UWBA S(ALGR(OP_R)    // ⬆
 #define OP_RWBA S(ALGR(OP_N)    // ➡
 #define OP_RQUE S(ALGR(OP_CIR)  // ⸮
-#define OP_NDSH S(ALGR(OP_Z)    // 🄯 @TODO c’est quoi ça ?
+// #define OP_NDSH S(ALGR(OP_Z)    // 🄯 @TODO c’est quoi ça ?
 // Row 4
 #define OP_HELM S(ALGR(OP_K))    // ⎈
 #define OP_OPTI S(ALGR(OP_Y))    // ⌥
 #define OP_PINT S(ALGR(OP_EGRV)) // ⌘
 #define OP_MDDT S(ALGR(OP_DOT))  // ·
 #define OP_BALX S(ALGR(OP_W))    // ✗
-#define OP_NONE S(ALGR(OP_B))    // @TODO ??? c’est quoi ?
+// #define OP_NONE S(ALGR(OP_B))    // @TODO ??? c’est quoi ?
 #define OP_FBAS S(ALGR(OP_G))    // ✣
 #define OP_DAGG S(ALGR(OP_C))    // †
 #define OP_DDAG S(ALGR(OP_M))    // ‡
 #define OP_REGD S(ALGR(OP_H))    // ®
-#define OP_NONE S(ALGR(OP_V))    // ™̸̣̦ @TODO ??? c’est quoi ?
+// #define OP_NONE S(ALGR(OP_V))    // ™̸̣̦ @TODO ??? c’est quoi ?
 // Row 5
 #define OP_NNBS S(ALGR(KC_SPC))  //   (narrow non-breaking space)
+
+// Définition des fonctions
+
