@@ -7,7 +7,7 @@ COMB(YXDOT_ESC, 		KC_ESC,   			KC_X, KC_C, KC_V)
 COMB(YXDOT_ESC2, 		KC_ESC,				BP_Y, BP_X, BP_DOT) // For Moonlander
 COMB(CApos_ENT,			KC_ENT,				KC_H, KC_N)
 COMB(CApos_ENT2,		KC_ENT,				BP_C, BP_APOS) // For Moonlander
-COMB(ComK_ENT,			KC_ENT,				BP_COMM, KC_B)
+COMB(ComK_ENT,			KC_ENT,				LGUI_T(KC_F), KC_V)
 COMB(ComK_ENT2,			KC_ENT,				BP_COMM, BP_K) // For Moonlander
 COMB(CircC_DEL,			KC_DEL,				KC_Y, KC_H)
 COMB(CircC_DEL2,		KC_DEL,				KC_Y, BP_C) // For Moonlander
