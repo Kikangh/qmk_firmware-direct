@@ -69,19 +69,19 @@ enum tap_dance_codes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_moonlander(
-    KC_ESCAPE,            BP_DQOT,        BP_LGIL,            BP_RGIL,            BP_LPRN,            BP_RPRN,        KC_BSPACE,                                                                                                              KC_DELETE, BP_AT,   BP_PLUS,            BP_MINS,        BP_SLSH,        BP_ASTR,        KC_BSPACE,      
-    KC_TAB,               BP_B,           BP_ECUT,            BP_P,               BP_O,               BP_EGRV,        RGB_TOG,                                                                                                                KC_BSPACE, KC_Y,    BP_V,               BP_D,           BP_L,           BP_J,           BP_Z,           
-    MT(MOD_LSFT, KC_F10), LT(1,BP_A),     MT(MOD_LCTL, OP_I), MT(MOD_LALT, BP_I), MT(MOD_LGUI, BP_E), BP_COMM,        LALT(LGUI(BP_C)),                                                                                                       KC_ENTER,  BP_C,    MT(MOD_RGUI, BP_T), MT(MOD_RALT, BP_S),MT(MOD_RCTL, BP_R),MT(MOD_RSFT, BP_N),BP_M,           
-    TD(DANCE_0),          BP_AGRV,        BP_Y,               BP_X,               BP_DOT,             LT(5,BP_K),                                                                                                                                        BP_APOS, BP_Q,               BP_G,           BP_H,           BP_F,           BP_W,        
-    KC_F3,                TG(4),          OSL(3),             TD(DANCE_2),        MT(MOD_LSFT, OP_X),                                   LGUI(KC_SPACE),                                                                RCTL(KC_SPACE),                            LT(4,KC_ENTER),         RCTL(KC_SPACE), KC_RIGHT,       RCTL(KC_LEFT),  RCTL(KC_RIGHT), 
+    KC_ESCAPE,   BP_DQOT,        BP_LGIL,            BP_RGIL,            BP_LPRN,            BP_RPRN,        KC_BSPACE,                                                                                                              KC_DELETE, BP_AT,   BP_PLUS,            BP_MINS,        BP_SLSH,        BP_ASTR,        KC_BSPACE,      
+    KC_TAB,      BP_B,           BP_ECUT,            BP_P,               BP_O,               BP_EGRV,        RGB_TOG,                                                                                                                KC_BSPACE, KC_Y,    BP_V,               BP_D,           BP_L,           BP_J,           BP_Z,           
+    KC_LSHIFT,   LT(1,BP_A),     MT(MOD_LCTL, OP_I), MT(MOD_LALT, BP_I), MT(MOD_LGUI, BP_E), BP_COMM,        LALT(LGUI(BP_C)),                                                                                                       KC_ENTER,  BP_C,    MT(MOD_RGUI, BP_T), MT(MOD_RALT, BP_S),MT(MOD_RCTL, BP_R),MT(MOD_RSFT, BP_N),BP_M,           
+    TD(DANCE_0), BP_AGRV,        BP_Y,               BP_X,               BP_DOT,             LT(5,BP_K),                                                                                                                                        BP_APOS, BP_Q,               BP_G,           BP_H,           BP_F,           BP_W,        
+    KC_F3,       TG(4),          OSL(3),             TD(DANCE_2),        MT(MOD_LSFT, OP_X),                                   LGUI(KC_SPACE),                                                                RCTL(KC_SPACE),                            LT(4,KC_ENTER),         RCTL(KC_SPACE), KC_RIGHT,       RCTL(KC_LEFT),  RCTL(KC_RIGHT), 
                                                                                                                           MT(MOD_LGUI, KC_SPACE), LGUI(OP_C),     LGUI(OP_V),           LGUI(LCTL(LSFT(BP_LPRN))),KC_BSLS, LT(2,KC_SPACE)
   ),
   [1] = LAYOUT_moonlander(
-    TO(0),          KC_TRANSPARENT, KC_TRANSPARENT, TO(4),            KC_TRANSPARENT,   KC_TRANSPARENT,             KC_TRANSPARENT,                                  KC_TRANSPARENT, ST_MACRO_0, ST_MACRO_1,             ST_MACRO_2,     ST_MACRO_3,     ST_MACRO_4,     KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_TRANSPARENT, LCTL(BP_DQOT),  LCTL(BP_LGIL),    LGUI(LSFT(OP_M)), KC_BSPACE,                  KC_DELETE,                                       KC_TRANSPARENT, KC_MINS,    LGUI(LCTL(LSFT(OP_A))), LCTL(LSFT(KC_TAB)),LCTL(KC_TAB),   KC_TRANSPARENT, BP_W,           
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_LCTRL,       KC_LALT,          KC_LGUI,          LALT(LGUI(LSFT(KC_SPACE))), LGUI(KC_F12),                                    KC_TRANSPARENT, OP_HASH,    KC_LEFT,                KC_UP,          KC_DOWN,        KC_RIGHT,       KC_F10,         
-    RESET,          KC_TRANSPARENT, KC_TRANSPARENT, KC_NO,            KC_NO,            KC_NO,                                                                                       OP_QUES,    BP_DLR,                 LGUI(LSFT(KC_UP)),LGUI(LSFT(KC_DOWN)),LGUI(LSFT(LALT(BP_F))),RALT(RGUI(RCTL(BP_T))),
-    KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,            KC_LSFT, LALT(LSFT(KC_LEFT)),                                                                      LGUI(LSFT(KC_LEFT)),KC_NO, LCTL(LSFT(BP_SLSH)),LCTL(LSFT(BP_ASTR)),KC_TRANSPARENT, KC_TRANSPARENT, 
+    TO(0),          KC_TRANSPARENT, KC_TRANSPARENT, TO(4),            KC_TRANSPARENT,   KC_TRANSPARENT,             KC_TRANSPARENT,                                  KC_TRANSPARENT, ST_MACRO_0, ST_MACRO_1,             ST_MACRO_2,         ST_MACRO_3,          ST_MACRO_4,             KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, LCTL(BP_DQOT),  LCTL(BP_LGIL),    LGUI(LSFT(OP_M)), KC_BSPACE,                  KC_DELETE,                                       KC_TRANSPARENT, KC_MINS,    LGUI(LCTL(LSFT(OP_A))), LCTL(LSFT(KC_TAB)), LCTL(KC_TAB),        KC_TRANSPARENT,         KC_TRANSPARENT,           
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_LCTRL,       KC_LALT,          KC_LGUI,          LALT(LGUI(LSFT(KC_SPACE))), LGUI(KC_F12),                                    KC_TRANSPARENT, OP_HASH,    KC_LEFT,                KC_UP,              KC_DOWN,             KC_RIGHT,               KC_F10,         
+    RESET,          KC_TRANSPARENT, KC_TRANSPARENT, KC_NO,            KC_NO,            KC_NO,                                                                                       OP_QUES,    BP_DLR,                 LGUI(LSFT(KC_UP)),  LGUI(LSFT(KC_DOWN)), LGUI(LSFT(LALT(KC_Y))), RALT(RGUI(RCTL(BP_T))),
+    KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,            KC_LSFT, LALT(LSFT(KC_LEFT)),                                                                      LGUI(LSFT(KC_LEFT)),KC_NO, LCTL(LSFT(BP_SLSH)),LCTL(LSFT(BP_ASTR)), KC_TRANSPARENT,      KC_TRANSPARENT, 
                                                               MT(MOD_LSFT, KC_SPACE),LGUI(OP_X),     LALT(LGUI(LSFT(OP_V))),                LGUI(LSFT(KC_4)),KC_HOME,        KC_END
   ),
   [2] = LAYOUT_moonlander(
@@ -309,30 +309,30 @@ void dance_0_reset(qk_tap_dance_state_t *state, void *user_data);
 
 void on_dance_0(qk_tap_dance_state_t *state, void *user_data) {
     if(state->count == 3) {
-        tap_code16(KC_F3);
-        tap_code16(KC_F3);
-        tap_code16(KC_F3);
+        tap_code16(KC_F10);
+        tap_code16(KC_F10);
+        tap_code16(KC_F10);
     }
     if(state->count > 3) {
-        tap_code16(KC_F3);
+        tap_code16(KC_F10);
     }
 }
 
 void dance_0_finished(qk_tap_dance_state_t *state, void *user_data) {
     dance_state[0].step = dance_step(state);
     switch (dance_state[0].step) {
-        case SINGLE_TAP: register_code16(KC_F3); break;
+        case SINGLE_TAP: register_code16(KC_F10); break;
         case DOUBLE_TAP: register_code16(LALT(LGUI(LSFT(BP_C)))); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(KC_F3); register_code16(KC_F3);
+        case DOUBLE_SINGLE_TAP: tap_code16(KC_F10); register_code16(KC_F10);
     }
 }
 
 void dance_0_reset(qk_tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[0].step) {
-        case SINGLE_TAP: unregister_code16(KC_F3); break;
+        case SINGLE_TAP: unregister_code16(KC_F10); break;
         case DOUBLE_TAP: unregister_code16(LALT(LGUI(LSFT(BP_C)))); break;
-        case DOUBLE_SINGLE_TAP: unregister_code16(KC_F3); break;
+        case DOUBLE_SINGLE_TAP: unregister_code16(KC_F10); break;
     }
     dance_state[0].step = 0;
 }
