@@ -25,7 +25,7 @@
 #define BP_NDSH_MAC ALGR(KC_8)
 #define SE_SECT_MAC ALGR(KC_6)
 #define MOON_LED_LEVEL LED_LEVEL
-#define ALFRED_CLIP_HIST LALT(LGUI(BP_C))
+#define ALFRED_CLIP_HIST LALT(LGUI(KC_H))
 
 enum custom_keycodes {
   RGB_SLD = ML_SAFE_RANGE,
@@ -149,8 +149,8 @@ void set_layer_color(int layer) {
   }
 }
 
-/*void rgb_matrix_indicators_user(void) {
-  if (g_suspend_state || keyboard_config.disable_layer_led) { return; }
+void rgb_matrix_indicators_user(void) {
+  //if (g_suspend_state || keyboard_config.disable_layer_led) { return; }
   switch (biton32(layer_state)) {
     case 1:
       set_layer_color(1);
@@ -159,11 +159,11 @@ void set_layer_color(int layer) {
       set_layer_color(4);
       break;
    default:
-    if (rgb_matrix_get_flags() == LED_FLAG_NONE)es
+    if (rgb_matrix_get_flags() == LED_FLAG_NONE)
       rgb_matrix_set_color_all(0, 0, 0);
     break;
   }
-}*/
+}
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
@@ -448,3 +448,12 @@ qk_tap_dance_action_t tap_dance_actions[] = {
         [DANCE_2] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_2, dance_2_finished, dance_2_reset),
         [DANCE_3] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_3, dance_3_finished, dance_3_reset),
 };
+
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case TD(DANCE_2):
+            return 130;
+        default:
+            return TAPPING_TERM;
+    }
+}
