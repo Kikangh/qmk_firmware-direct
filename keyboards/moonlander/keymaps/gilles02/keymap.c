@@ -78,9 +78,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [1] = LAYOUT_moonlander(
     TO(0),          KC_TRANSPARENT, KC_TRANSPARENT, TO(4),            KC_TRANSPARENT,   KC_TRANSPARENT,             KC_TRANSPARENT,                                  KC_TRANSPARENT, ST_MACRO_0, ST_MACRO_1,             ST_MACRO_2,         ST_MACRO_3,          ST_MACRO_4,             KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_TRANSPARENT, LCTL(BP_DQOT),  LCTL(BP_LGIL),    LGUI(LSFT(OP_M)), KC_BSPACE,                  KC_DELETE,                                       KC_TRANSPARENT, KC_MINS,    LGUI(LCTL(LSFT(OP_A))), LCTL(LSFT(KC_TAB)), LCTL(KC_TAB),        KC_TRANSPARENT,         KC_TRANSPARENT,           
+    KC_TRANSPARENT, KC_TRANSPARENT, LCTL(BP_DQOT),  LCTL(BP_LGIL),    LGUI(LSFT(OP_M)), KC_BSPACE,                  KC_DELETE,                                       KC_TRANSPARENT, KC_MINS,    LGUI(LSFT(KC_8)),       LCTL(LSFT(KC_TAB)), LCTL(KC_TAB),        KC_TRANSPARENT,         KC_TRANSPARENT,           
     KC_TRANSPARENT, KC_TRANSPARENT, KC_LCTRL,       KC_LALT,          KC_LGUI,          LALT(LGUI(LSFT(KC_SPACE))), LGUI(KC_F12),                                    KC_TRANSPARENT, OP_HASH,    KC_LEFT,                KC_UP,              KC_DOWN,             KC_RIGHT,               KC_F10,         
-    RESET,          KC_TRANSPARENT, KC_TRANSPARENT, KC_NO,            KC_NO,            KC_NO,                                                                                       OP_QUES,    BP_DLR,                 LGUI(LSFT(KC_UP)),  LGUI(LSFT(KC_DOWN)), LGUI(LSFT(LALT(KC_Y))), RALT(RGUI(RCTL(BP_T))),
+    RESET,          KC_TRANSPARENT, KC_TRANSPARENT, KC_NO,            KC_NO,            KC_NO,                                                                                       OP_QUES,    BP_DLR,                 LGUI(LSFT(KC_UP)),  LGUI(LSFT(KC_DOWN)), LGUI(LSFT(LALT(KC_Y))), RALT(RGUI(RCTL(KC_J))),
     KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,            KC_LSFT, LALT(LSFT(KC_LEFT)),                                                                      LGUI(LSFT(KC_LEFT)),KC_NO, LCTL(LSFT(BP_SLSH)),LCTL(LSFT(BP_ASTR)), KC_TRANSPARENT,      KC_TRANSPARENT, 
                                                               MT(MOD_LSFT, KC_SPACE),LGUI(OP_X),     LALT(LGUI(LSFT(OP_V))),                LGUI(LSFT(KC_4)),KC_HOME,        KC_END
   ),
@@ -101,12 +101,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     RGB_VAD,        RGB_VAI,        TOGGLE_LAYER_COLOR,                RGB_SLD,        RGB_HUD,        RGB_HUI
   ),
   [4] = LAYOUT_moonlander(
-    TO(0),          LALT(LGUI(KC_ESCAPE)),KC_TRANSPARENT, TO(1),          KC_TRANSPARENT, KC_NO,          KC_NO,                                          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_TRANSPARENT, LALT(LGUI(LCTL(LSFT(BP_O)))),LGUI(KC_LEFT),  KC_MS_UP,       LGUI(KC_RIGHT), LALT(LCTL(LSFT(KC_SPACE))),KC_NO,                        KC_TRANSPARENT, KC_MS_BTN3,     KC_MS_WH_RIGHT, KC_MS_WH_LEFT,  LGUI(OP_M),     KC_AUDIO_VOL_UP,KC_F12,         
-    LALT(LGUI(LCTL(LSFT(BP_O)))),RALT(RGUI(BP_COMM)),KC_MS_LEFT,     KC_MS_DOWN,     KC_MS_RIGHT,    LCTL(LSFT(KC_SPACE)),KC_NO,                          KC_TRANSPARENT, KC_MS_WH_DOWN,  KC_MS_BTN1,     KC_MS_BTN2,     LGUI(LSFT(OP_M)),KC_AUDIO_VOL_DOWN,LALT(LGUI(BP_N)),
-    KC_TRANSPARENT, LCTL(OP_E),     LALT(LGUI(LCTL(KC_SPACE))),LALT(LGUI(LSFT(KC_SPACE))),LGUI(LCTL(LSFT(KC_SPACE))),LGUI(LCTL(KC_SPACE)),                                KC_MS_WH_UP,    KC_MS_ACCEL0,   KC_MS_ACCEL1,   KC_MS_ACCEL2,   KC_AUDIO_MUTE,  KC_TRANSPARENT, 
-    WEBUSB_PAIR,    KC_TRANSPARENT, KC_NO,          KC_PGDOWN,      KC_NO,          KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-    TD(DANCE_3),    ST_MACRO_5,     ST_MACRO_6,                     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
+    TO(0),                        LALT(LGUI(KC_ESCAPE)),        KC_TRANSPARENT, TO(1),          KC_TRANSPARENT, KC_NO,          KC_NO,                                          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT,               LALT(LGUI(LCTL(LSFT(BP_O)))), LGUI(KC_LEFT),  KC_MS_UP,       LGUI(KC_RIGHT), LALT(LCTL(LSFT(KC_SPACE))),KC_NO,                        KC_TRANSPARENT, KC_MS_BTN3,     KC_MS_WH_RIGHT, KC_MS_WH_LEFT,  LGUI(OP_M),     KC_AUDIO_VOL_UP,KC_F12,         
+    LALT(LGUI(LCTL(LSFT(BP_O)))), RALT(RGUI(BP_COMM)),          KC_MS_LEFT,     KC_MS_DOWN,     KC_MS_RIGHT,    LCTL(LSFT(KC_SPACE)),KC_NO,                          KC_TRANSPARENT, KC_MS_WH_DOWN,  KC_MS_BTN1,     KC_MS_BTN2,     LGUI(LSFT(OP_M)),KC_AUDIO_VOL_DOWN,LALT(LGUI(BP_N)),
+    KC_TRANSPARENT,               LCTL(OP_E),                   LALT(LGUI(LCTL(KC_SPACE))),LALT(LGUI(LSFT(KC_SPACE))),LGUI(LCTL(LSFT(KC_SPACE))),LGUI(LCTL(KC_SPACE)),                                KC_MS_WH_UP,    KC_MS_ACCEL0,   KC_MS_ACCEL1,   KC_MS_ACCEL2,   KC_AUDIO_MUTE,  KC_TRANSPARENT, 
+    WEBUSB_PAIR,                  KC_TRANSPARENT,               KC_NO,          KC_PGDOWN,      KC_NO,          KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+                                                                                                      TD(DANCE_3),    ST_MACRO_5,     ST_MACRO_6,                     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [5] = LAYOUT_moonlander(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                         KC_TRANSPARENT, KC_TRANSPARENT,       KC_TRANSPARENT,         KC_TRANSPARENT,      KC_TRANSPARENT,         KC_TRANSPARENT,   KC_TRANSPARENT, 
