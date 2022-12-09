@@ -14,16 +14,16 @@ COMB(VT_BKSP,			KC_BSPC,			KC_U, RGUI_T(KC_J))
 COMB(VT_BKSP2,			KC_BSPC,			BP_V, MT(MOD_RGUI, BP_T)) // For Moonlander
 // Lettres
 COMB(DS_Z,				BP_Z,				KC_I, RALT_T(KC_K))
-COMB(DS_Z2,				KC_BSLS,			BP_D, MT(MOD_RALT, BP_S)) // For Moonlander
+COMB(DS_APPLIST,				RCTL(KC_SPACE),		BP_D, MT(MOD_RALT, BP_S)) // For Moonlander
 COMB(TQ_W,				BP_W,				RGUI_T(KC_J), KC_M)
-COMB(TQ_W2,				BP_W,				MT(MOD_RGUI, BP_T), BP_Q) // For Moonlander Opt_CCed
+COMB(TQ_CIRC,			OP_CIR,				MT(MOD_RGUI, BP_T), BP_Q) // For Moonlander Opt_CIRC
 COMB(CT_B,				BP_B,				KC_N, KC_M)
 COMB(CT_B2,				BP_B,				BP_APOS, BP_Q) // For Moonlander
 COMB(SG_M,				BP_M,				RALT_T(KC_K), BP_G)
 COMB(SG_M2,				KC_QUOTE,			MT(MOD_RALT, BP_S), BP_G) // For Moonlander
 COMB(RH_CCED,			KC_BSLS,			RCTL_T(KC_L), BP_H)
 COMB(RH_CCED2,			OP_CCED,			MT(MOD_RCTL, BP_R), BP_H) // For Moonlander
-COMB(RH_ACCIRC,			OP_CCED,			MT(MOD_RCTL, BP_R), BP_H) // For Moonlander
+//COMB(RH_ACCIRC,			OP_CCED,			MT(MOD_RCTL, BP_R), BP_H) // For Moonlander
 COMB(OPTIMOT_X,			OP_X,				MT(MOD_LALT, BP_I), BP_X) // For Moonlander
 // Functions
 COMB(Edot_UNDO,   		LGUI(BP_Z),		   	KC_G, KC_B)
